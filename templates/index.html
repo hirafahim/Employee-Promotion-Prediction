@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>EMPLOYEE PROMOTION PREDICTION</title>
+  
+</head>
+
+<body style="background: #CFECEC;">
+ <div class="login">
+	<h1 style="color:Black;">EMPLOYEE PROMOTION PREDICTION</h1>
+
+     <!-- Action is where the data is sent. In our case, predict page.
+     If action is omitted, it assumed to be the current page -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <label for="Education">Education:</label><br>
+    	<input type="text" name="Education" placeholder="" required="required" /><p><br>
+    	<label for="Gender">Gender:</label><br>
+        <input type="text" name="Gender" placeholder="" required="required" /><p><br>
+        <label for="Recruitment Channel">Recruitment Channel:</label><br>
+        <input type="text" name="Recruitment Channel" placeholder="" required="required" /><p><br>
+        <label for="Number of Trainings">Number of Trainings:</label><br>
+        <input type="text" name="Number of Trainings" placeholder="" required="required" /><p><br>
+        <label for="Age">Age:</label><br>
+        <input type="text" name="Age" placeholder="" required="required" /><p><br>
+        <label for="Previous Year Rating">Previous Year Rating:</label><br>
+        <input type="text" name="Previous Year Rating" placeholder="" required="required" /><p><br>
+        <label for="Length of Service">Length of Service:</label><br>
+        <input type="text" name="Length of Service" placeholder="" required="required" /><p><br>
+        <label for="Awards Won">Awards Won:</label><br>
+        <input type="text" name="Awards Won" placeholder="" required="required" /><p><br>
+        <label for="Average Training Score">Average Training Score:</label><br>
+        <input type="text" name="Average Training Score" placeholder="" required="required" /><p><br>
+               
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button></p>
+    </form>
+<p>0:Employee is not Promoted or 1: Employee is promoted</p> 
+   <h4 style="color:Black;">
+   {{prediction_text }} </h4>
+   
+ </div>
+
+
+</body>
+</html>
